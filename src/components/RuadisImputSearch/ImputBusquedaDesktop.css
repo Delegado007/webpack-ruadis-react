@@ -1,0 +1,84 @@
+header .container_search_desktop {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+div .lupa_search_desktop {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-left: 12px;
+  margin-right: 12px;
+}
+div .search_desktop_transition_ease-out {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 42px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(255, 255, 255, 0.3) 4px 4px 15px;
+  border: 1px solid transparent;
+  box-sizing: content-box;
+  border-radius: 10px;
+  transition: all 0.4s ease-out 0s;
+}
+/* clases a asignar cuando mause clic adentro */
+div .search_desktop_transition_ease-in {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 42px;
+  background-color: rgb(241, 241, 241);
+  box-shadow: none;
+  border: 1px solid rgb(233, 231, 277);
+  box-sizing: content-box;
+  border-radius: 10px;
+  transition: all 0.4s ease-in 0s;
+}
+div .imput_search_desktop {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: normal;
+  font-weight: 400;
+  width: 100%;
+  height: 42px;
+  border: none;
+  background-color: inherit;
+  outline: none;
+  caret-color: rgb(93, 93, 93);
+  color: rgb(64, 64, 69);
+  text-overflow: ellipsis;
+  border-radius: 10px;
+  appearance: none;
+}
+div .container_button_clean_imput {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 50px;
+  height: 100%;
+  margin-right: 10px;
+}
+div .button_clean_imput {
+  position: relative;
+  left: 0px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0px;
+}
+div .svg_clean_imput {
+  user-select: none;
+  display: flex;
+  padding: 0px;
+}
+.container_search_desktop .no_display {
+  display: none;
+}
+.container_search_movil .no_display {
+  display: none;
+}
