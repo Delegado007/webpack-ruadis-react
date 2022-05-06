@@ -7,7 +7,6 @@
 .navbar .menuDesplegable {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   position: fixed;
   top: 0px;
   left: 0px;
