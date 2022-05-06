@@ -122,11 +122,7 @@ function App() {
         </div>
       </main>
       <div id="iconoWhatsapp">
-        <a
-          href="https://api.whatsapp.com/send?phone=2604566841"
-          rel="noreferrer"
-          target="_blank"
-        >
+        <a href={process.env.WS_URL} rel="noreferrer" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 48 48"
