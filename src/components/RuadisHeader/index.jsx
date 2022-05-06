@@ -75,7 +75,7 @@ function HeaderRuadis() {
           </button>
 
           <div
-            className="dropdown-content menuDesplegable w-96 max-w-[calc(100%-3rem)] pl-6 bg-slate-200 text-slate-700 dark:border-slate-700 dark:bg-gray-800"
+            className="dropdown-content menuDesplegable w-96 min-h-screen max-w-[calc(100%-3rem)] pl-6 bg-slate-200 text-slate-700 dark:border-slate-700 dark:bg-gray-800"
             id="clickbox"
             tabIndex="0"
           >
