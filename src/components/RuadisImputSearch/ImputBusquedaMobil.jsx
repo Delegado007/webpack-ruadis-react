@@ -2,8 +2,9 @@ import React from "react";
 import "./ImputBusquedaMobil.css";
 import "../RuadisHeader/index.css";
 
-function ImputBusquedaMobil() {
+function ImputBusquedaMobil({ setBuscar }) {
   const actualizarBusquedaMovil = function (event) {
+    setBuscar(event.target.value);
     if (event.target.value.length > 0) {
       const boton = document.querySelector("#div_cruz_reset_imput");
       boton.className = "container_button_clean_imput";
@@ -23,6 +24,7 @@ function ImputBusquedaMobil() {
   const borrarImputMovil = function () {
     const imput = document.querySelector("#searchInputMovil");
     imput.value = "";
+    setBuscar("");
     const boton = document.querySelector("#div_cruz_reset_imput");
     boton.className = "no_display";
   };

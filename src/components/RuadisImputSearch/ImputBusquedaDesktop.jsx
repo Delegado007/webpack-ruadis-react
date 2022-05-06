@@ -1,8 +1,9 @@
 import React from "react";
 import "./ImputBusquedaDesktop.css";
 
-function ImputBusquedaDesktop() {
+function ImputBusquedaDesktop({ setBuscar }) {
   const actualizarBusqueda = function (event) {
+    setBuscar(event.target.value);
     if (event.target.value.length > 0) {
       const boton = document.querySelector("#SearchBarClearIconWrapper");
       boton.className = "container_button_clean_imput";
@@ -22,6 +23,7 @@ function ImputBusquedaDesktop() {
   const borrarImput = function () {
     const imput = document.querySelector("#searchInput");
     imput.value = "";
+    setBuscar("");
     const boton = document.querySelector("#SearchBarClearIconWrapper");
     boton.className = "no_display";
   };

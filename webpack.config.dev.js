@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 
 module.exports = {
@@ -75,5 +76,6 @@ module.exports = {
     },
     compress: true,
     port: 3006,
+    historyApiFallback: true,
   }
 }

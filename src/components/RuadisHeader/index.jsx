@@ -3,8 +3,10 @@ import "../RuadisHeader/index.css";
 import { useState } from "react";
 import { ImputBusquedaDesktop } from "../RuadisImputSearch/ImputBusquedaDesktop";
 import { ImputBusquedaMobil } from "../RuadisImputSearch/ImputBusquedaMobil";
+import { RuadisContext } from "./../UseContext";
 
 function HeaderRuadis() {
+  const { buscar, setBuscar } = React.useContext(RuadisContext);
   const [desplegarMenu, setDesplegarMenu] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
@@ -78,7 +80,7 @@ function HeaderRuadis() {
             tabIndex="0"
           >
             <div>
-              <ImputBusquedaMobil />
+              <ImputBusquedaMobil valor={buscar} setBuscar={setBuscar} />
             </div>
             <ul
               className="flex mt-2 menu shadow space-y-6 lg:space-y-2 border-l dark:border-slate-100  border-slate-400 "
@@ -151,22 +153,22 @@ function HeaderRuadis() {
       <div className="navbar-center logo mx-auto dark:text-slate-400 dark:hover:text-slate-300">
         <a className="text-xl font-bold mx-auto">Ruadis</a>
       </div>
-      <ImputBusquedaDesktop />
+      <ImputBusquedaDesktop valor={buscar} setBuscar={setBuscar} />
       <div className="itemsMenu">
         <ul className="menu menu-horizontal ">
-          <li className="rounded  dark:hover:bg-slate-700">
+          <li className="rounded  dark:hover:bg-slate-700 hover:bg-slate-200">
             <a>Inicio</a>
           </li>
-          <li className="rounded  dark:hover:bg-slate-700">
+          <li className="rounded  dark:hover:bg-slate-700 hover:bg-slate-200">
             <a>Libros</a>
           </li>
-          <li className="rounded  dark:hover:bg-slate-700">
+          <li className="rounded  dark:hover:bg-slate-700 hover:bg-slate-200">
             <a>Escuelas</a>
           </li>
-          <li className="rounded  dark:hover:bg-slate-700">
+          <li className="rounded  dark:hover:bg-slate-700 hover:bg-slate-200">
             <a>Terciarios</a>
           </li>
-          <li className="rounded  dark:hover:bg-slate-700">
+          <li className="rounded  dark:hover:bg-slate-700 hover:bg-slate-200">
             <a>Varios</a>
           </li>
         </ul>
