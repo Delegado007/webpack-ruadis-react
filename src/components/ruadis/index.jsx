@@ -11,7 +11,7 @@ function RuadisLogin() {
         <div>
           <h1 className="text-2xl text-center mb-4">Sign in to Ruadis</h1>
         </div>
-        <form className="w-80 mx-auto bg-slate-300 rounded-md">
+        <form className="w-80 mx-auto bg-slate-300 rounded">
           <div className="p-4">
             <div className="">
               <label htmlFor="exampleInputEmail1" className="">
