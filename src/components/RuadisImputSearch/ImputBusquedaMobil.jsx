@@ -1,5 +1,5 @@
 import React from "react";
-import "./imputBusquedaMobil.css";
+import "./ImputBusquedaMobil.css";
 import "../RuadisHeader/index.css";
 
 function ImputBusquedaMobil({ setBuscar }) {
