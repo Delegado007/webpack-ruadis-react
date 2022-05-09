@@ -11,7 +11,7 @@ function App() {
         <Routes>
           {/* <Route path="OyeCanciones" element={<OyeMain />} />
           <Route path="OyeRegistro" element={<OyeRegistro />} /> */}
-          <Route path="login" element={<RuadisLogin />} />
+          <Route path="/login" element={<RuadisLogin />} />
           <Route path="/" element={<RuadisMain />} />
         </Routes>
       </BrowserRouter>
