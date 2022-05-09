@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderRuadis } from "../ruadisHeader";
+import { HeaderRuadis } from "../ruadisHeader/index";
 // import "../RuadisMain/index.css";
 
 function RuadisLogin() {

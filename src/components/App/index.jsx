@@ -1,8 +1,8 @@
 import React from "react";
 import { RuadisMain } from "./../ruadisMain/index";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { RuadisProvider } from "./../useContext";
-import { RuadisLogin } from "./../ruadisLogin";
+import { RuadisProvider } from "./../useContext/index";
+import { RuadisLogin } from "./../ruadisLogin/index";
 
 function App() {
   return (
