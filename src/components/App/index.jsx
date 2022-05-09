@@ -2,7 +2,7 @@ import React from "react";
 import { RuadisMain } from "../RuadisMain";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RuadisProvider } from "../UseContext";
-import { RuadisLogin } from "../RuadisLogin";
+import { RuadisLogin } from "./../RuadisLogin";
 
 function App() {
   return (
