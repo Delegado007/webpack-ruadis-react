@@ -1,7 +1,8 @@
 import React from "react";
-import { RuadisMain } from "./../RuadisMain/index";
+import { RuadisMain } from "./../ruadisMain/index";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { RuadisProvider } from "./../UseContext";
+import { RuadisProvider } from "./../useContext";
+import { RuadisLogin } from "./../ruadisLogin";
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="OyeCanciones" element={<OyeMain />} />
-          <Route path="OyeRegistro" element={<OyeRegistro />} />
-          <Route path="OyeLogin" element={<OyeLogin />} /> */}
+          <Route path="OyeRegistro" element={<OyeRegistro />} /> */}
+          <Route path="login" element={<RuadisLogin />} />
           <Route path="/" element={<RuadisMain />} />
         </Routes>
       </BrowserRouter>
