@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderRuadis } from "../ruadisHeader/index";
+import { HeaderRuadis } from "../RuadisHeader";
 // import "../RuadisMain/index.css";
 
 function RuadisLogin() {
@@ -8,9 +8,9 @@ function RuadisLogin() {
       <HeaderRuadis />
       <main className="min-h-screen">
         <div className=" h-44"></div>
-        <di>
+        <div>
           <h1 className="text-2xl text-center mb-4">Sign in to Ruadis</h1>
-        </di>
+        </div>
         <form className="w-80 mx-auto bg-slate-300 rounded-md">
           <div className="p-4">
             <div className="">

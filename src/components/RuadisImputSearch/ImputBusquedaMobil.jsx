@@ -1,6 +1,6 @@
 import React from "react";
-import "./ImputBusquedaMobil.css";
-import "../ruadisHeader/index.css";
+import "./imputBusquedaMobil.css";
+import "../RuadisHeader/index.css";
 
 function ImputBusquedaMobil({ setBuscar }) {
   const actualizarBusquedaMovil = function (event) {

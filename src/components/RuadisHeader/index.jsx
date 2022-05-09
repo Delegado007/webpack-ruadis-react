@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import "../ruadisHeader/index.css";
+import "./index.css";
 import { useState } from "react";
-import { ImputBusquedaDesktop } from "../ruadisImputSearch/ImputBusquedaDesktop";
-import { ImputBusquedaMobil } from "../ruadisImputSearch/ImputBusquedaMobil";
-import { RuadisContext } from "./../useContext";
+import { ImputBusquedaDesktop } from "../RuadisImputSearch/ImputBusquedaDesktop";
+import { ImputBusquedaMobil } from "../RuadisImputSearch/ImputBusquedaMobil";
+import { RuadisContext } from "../UseContext";
 
 function HeaderRuadis() {
   const { buscar, setBuscar } = React.useContext(RuadisContext);

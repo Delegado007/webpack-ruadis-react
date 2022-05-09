@@ -1,8 +1,8 @@
 import React from "react";
-import { ItemMain } from "../ruadisMainItems";
-import "../ruadisMain/index.css";
-import { HeaderRuadis } from "../ruadisHeader";
-import { RuadisContext } from "./../useContext";
+import { ItemMain } from "../RuadisMainItems";
+import "./index.css";
+import { HeaderRuadis } from "../RuadisHeader";
+import { RuadisContext } from "../UseContext";
 
 function RuadisMain() {
   const { datosLibros, WS_URL, buscar } = React.useContext(RuadisContext);
