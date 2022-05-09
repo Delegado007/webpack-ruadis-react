@@ -9,7 +9,7 @@ function App() {
     <RuadisProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<RuadisLogin />} />
+          <Route path="login" element={<RuadisLogin />} />
           <Route path="/" element={<RuadisMain />} />
         </Routes>
       </BrowserRouter>
