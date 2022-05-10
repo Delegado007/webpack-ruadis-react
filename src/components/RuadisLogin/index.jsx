@@ -9,10 +9,10 @@ function RuadisLogin() {
       <main className="min-h-screen">
         <div className=" h-44"></div>
         <div>
-          <h1 className="text-2xl text-center mb-4">Sign in to Ruadis</h1>
+          <h1 className="text-2xl text-center mb-4">Iniciar Sesi&oacute;n</h1>
         </div>
         <form className="w-80 mx-auto">
-          <div className="bg-slate-300 rounded">
+          <div className="bg-slate-300 rounded dark:bg-slate-700">
             <div className="p-4">
               <div className="">
                 <label htmlFor="exampleInputEmail1" className="">
@@ -20,23 +20,26 @@ function RuadisLogin() {
                 </label>
                 <input
                   type="email"
-                  className=" w-72 rounded-md leading-8 mb-3 valid valid:border-green-500"
+                  className=" w-72 rounded-md leading-8 mb-4 mt-1"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                 />
               </div>
-              <div className="">
+              <div className="relative">
                 <label htmlFor="exampleInputPassword1" className="">
-                  Contraseña
+                  Contrase&ntilde;a
                 </label>
                 <input
                   type="password"
-                  className="w-72 rounded-md leading-8 mb-10"
+                  className="w-72 rounded-md leading-8 mb-10 mt-1"
                   id="exampleInputPassword1"
                 />
+                <a className="link link-accent absolute text-sm top-0 right-0 float-right">
+                  Olvidaste tu contrase&ntilde;a?
+                </a>
               </div>
-              <button type="submit" className="w-72 btn btn-accent">
-                Inciar sesión
+              <button type="submit" className="w-72 btn btn-active btn-accent">
+                Inciar sesi&oacute;n
               </button>
             </div>
           </div>

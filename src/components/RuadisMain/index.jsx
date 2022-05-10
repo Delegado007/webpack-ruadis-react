@@ -1,22 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ItemMain } from "../RuadisMainItems";
 import "./index.css";
 import { HeaderRuadis } from "../RuadisHeader";
 import { RuadisContext } from "../UseContext";
 
 function RuadisMain() {
-  const { datosLibros, WS_URL, buscar } = React.useContext(RuadisContext);
+  const { WS_URL, buscar, libros } = React.useContext(RuadisContext);
   let searchedPDF = { libros: [] };
 
   if (!buscar.length >= 1) {
-    searchedPDF.libros = datosLibros.libros;
+    searchedPDF.libros = libros;
   } else {
-    searchedPDF.libros = datosLibros.libros.filter((pdf) => {
-      const nombresPDF = pdf.titulo.toLocaleLowerCase();
+    searchedPDF.libros = libros.filter((pdf) => {
+      const nombresPDF = pdf.name.toLocaleLowerCase();
       const buscarMin = buscar.toLocaleLowerCase();
       return nombresPDF.includes(buscarMin);
     });
   }
+  console.log(searchedPDF);
 
   return (
     <React.Fragment>
@@ -26,9 +27,10 @@ function RuadisMain() {
           {searchedPDF.libros.map((libro) => (
             <ItemMain
               key={libro.id}
-              titulo={libro.titulo}
-              ano={libro.ano}
-              carillas={libro.carillas}
+              titulo={libro.name}
+              urlImg={libro.image}
+              carillas={libro.price}
+              description={libro.description}
             />
           ))}
         </div>
