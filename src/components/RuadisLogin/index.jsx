@@ -20,7 +20,7 @@ function RuadisLogin() {
                 </label>
                 <input
                   type="email"
-                  className=" w-72 rounded-md leading-8 mb-3"
+                  className=" w-72 rounded-md leading-8 mb-3 valid valid:border-green-500"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                 />
@@ -42,7 +42,9 @@ function RuadisLogin() {
           </div>
           <p className="p-3 mt-3 text-center border-slate-500 rounded-md ">
             {`Nuevo en Ruadis? `}
-            <a href="www.asada.com/create">Crea una cuenta</a>
+            <a className="link link-accent" href="www.asada.com/create">
+              Crea una cuenta
+            </a>
             {`.`}
           </p>
         </form>
