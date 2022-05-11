@@ -37,6 +37,9 @@
   .navbar .logo a {
     font-size: 1.5rem;
   }
+  .navbar .perfil {
+    width: 50%;
+  }
   .navbar .container_search_desktop {
     display: none;
   }
@@ -48,23 +51,14 @@
   .navbar .items {
     display: none;
   }
-  .navbar .perfil {
-    width: 50px;
-    margin-right: 10px;
-  }
   .navbar .logo {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 100px;
+    width: 80px;
     justify-content: flex-start;
   }
   .navbar .itemsMenu {
-    width: 430px;
     justify-content: flex-end;
-    margin-right: 20px;
-    margin-left: 20px;
   }
   .navbar .container_search_desktop {
-    width: calc(100% - 630px);
+    width: calc(100% - 680px);
   }
 }

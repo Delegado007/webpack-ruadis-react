@@ -3,7 +3,6 @@ header .container_search_desktop {
   -webkit-box-align: center;
   align-items: center;
   height: 100%;
-  width: 100%;
 }
 div .lupa_search_desktop {
   display: flex;
