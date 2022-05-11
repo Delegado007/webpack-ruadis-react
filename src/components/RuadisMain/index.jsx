@@ -24,8 +24,8 @@ function RuadisMain() {
       <main className="sm:w-12/12 md:w-12/12 lg:w-12/12 mx-auto my-10 py-5 min-h-screen">
         <div className="flex flex-wrap justify-center">
           {/* {loading && ( */}
-          <div className="relative min-h-screen">
-            <button className="absolute text-lg w-50 btn btn-ghost loading top-1/3 mx-auto">
+          <div className="relative min-h-screen w-screen">
+            <button className="absolute text-lg w-52 btn btn-ghost loading top-1/3 left-[calc(50%-6.5rem)] ">
               Cargando Libros
             </button>
           </div>
