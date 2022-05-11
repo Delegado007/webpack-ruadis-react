@@ -5,7 +5,7 @@ import { HeaderRuadis } from "../RuadisHeader";
 import { RuadisContext } from "../UseContext";
 
 function RuadisMain() {
-  const { WS_URL, buscar, libros } = React.useContext(RuadisContext);
+  const { WS_URL, buscar, libros, loading } = React.useContext(RuadisContext);
   let searchedPDF = { libros: [] };
 
   if (!buscar.length >= 1) {
@@ -17,14 +17,20 @@ function RuadisMain() {
       return nombresPDF.includes(buscarMin);
     });
   }
-  console.log(searchedPDF);
 
   return (
     <React.Fragment>
       <HeaderRuadis />
       <main className="sm:w-12/12 md:w-12/12 lg:w-12/12 mx-auto my-10 py-5 min-h-screen">
         <div className="flex flex-wrap justify-center">
-          {searchedPDF.libros.map((libro) => (
+          {/* {loading && ( */}
+          <div className="relative min-h-screen">
+            <button className="absolute text-lg w-50 btn btn-ghost loading top-1/3 mx-auto">
+              Cargando Libros
+            </button>
+          </div>
+          {/*)} */}
+          {/* {searchedPDF.libros.map((libro) => (
             <ItemMain
               key={libro.id}
               titulo={libro.name}
@@ -32,7 +38,7 @@ function RuadisMain() {
               carillas={libro.price}
               description={libro.description}
             />
-          ))}
+          ))} */}
         </div>
       </main>
       <div id="iconoWhatsapp">

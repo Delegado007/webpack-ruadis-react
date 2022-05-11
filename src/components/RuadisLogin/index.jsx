@@ -7,7 +7,7 @@ function RuadisLogin() {
     <React.Fragment>
       <HeaderRuadis />
       <main className="min-h-screen">
-        <div className=" h-44"></div>
+        <div className="h-44"></div>
         <div>
           <h1 className="text-2xl text-center mb-4">Iniciar Sesi&oacute;n</h1>
         </div>

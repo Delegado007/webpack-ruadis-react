@@ -6,9 +6,11 @@ const RuadisContext = React.createContext();
 
 function RuadisProvider(props) {
   const [libros, setLibros] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(async () => {
     const response = await axios(API);
     setLibros(response.data);
+    setLoading(false);
   }, []);
 
   const WS_URL = process.env.WS_URL;
@@ -20,6 +22,7 @@ function RuadisProvider(props) {
       WS_URL,
       buscar,
       setBuscar,
+      loading,
     }}
     >
       {props.children}
