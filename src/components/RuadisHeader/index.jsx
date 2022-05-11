@@ -87,7 +87,7 @@ function HeaderRuadis() {
           </button>
 
           <div
-            className=" menuDesplegable w-96 min-h-screen max-w-[calc(100%-3rem)] pl-6 bg-slate-200 text-slate-700 dark:border-slate-700 dark:bg-gray-800"
+            className=" menuDesplegable dropdown-content w-96 min-h-screen max-w-[calc(100%-3rem)] pl-6 bg-slate-200 text-slate-700 dark:border-slate-700 dark:bg-gray-800"
             id="clickbox"
             tabIndex="0"
           >
@@ -95,7 +95,7 @@ function HeaderRuadis() {
               <ImputBusquedaMobil valor={buscar} setBuscar={setBuscar} />
             </div>
             <ul
-              className="flex my-2 flex-col list-none shadow space-y-6 lg:space-y-2 border-l dark:border-slate-100  border-slate-400 "
+              className="flex my-2 flex-col list-none space-y-6 lg:space-y-2 border-l dark:border-slate-100  border-slate-400 "
               id="MenuDesplegable"
             >
               <li className="flex border-l border-transparent hover:border-slate-900 dark:hover:border-slate-500 text-slate-700 dark:text-slate-200 dark:hover:white hover:text-black">
