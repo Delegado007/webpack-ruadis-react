@@ -14,10 +14,19 @@ module.exports = {
     publicPath: "/",
     pathinfo: false,
   },
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
   mode: 'production',
+  resolve: {
+    extensions: ['.js', '.jsx', '.css'],
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@context': path.resolve(__dirname, 'src/context/'),
+      '@elements': path.resolve(__dirname, 'src/elements/'),
+      '@images': path.resolve(__dirname, 'src/images/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@routes': path.resolve(__dirname, 'src/routes/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+    }
+  },
   devServer: {
     historyApiFallback: true,
   },

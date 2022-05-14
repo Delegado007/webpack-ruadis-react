@@ -13,10 +13,19 @@ module.exports = {
     filename: 'main.js',
     pathinfo: false,
   },
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
   mode: 'development',
+  resolve: {
+    extensions: ['.js', '.jsx', '.css'],
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@context': path.resolve(__dirname, 'src/context/'),
+      '@elements': path.resolve(__dirname, 'src/elements/'),
+      '@images': path.resolve(__dirname, 'src/images/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@routes': path.resolve(__dirname, 'src/routes/'),
+      '@styles': path.resolve(__dirname, 'src/styles/'),
+    }
+  },
   module: {
     rules: [
       {

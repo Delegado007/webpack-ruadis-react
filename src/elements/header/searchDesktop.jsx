@@ -1,5 +1,5 @@
 import React from "react";
-import "./ImputBusquedaDesktop.css";
+import "@styles/imputBusquedaDesktop.css";
 
 function ImputBusquedaDesktop({ setBuscar }) {
   const actualizarBusqueda = function (event) {
