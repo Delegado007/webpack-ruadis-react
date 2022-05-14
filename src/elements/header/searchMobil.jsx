@@ -1,5 +1,7 @@
 import React from "react";
 import "@styles/imputBusquedaMobil.css";
+import "@styles/global.css";
+import "@styles/header.css";
 
 function ImputBusquedaMobil({ setBuscar }) {
   const actualizarBusquedaMovil = function (event) {

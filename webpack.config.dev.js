@@ -15,7 +15,7 @@ module.exports = {
   },
   mode: 'development',
   resolve: {
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.jsx'],
     alias: {
       '@components': path.resolve(__dirname, 'src/components/'),
       '@context': path.resolve(__dirname, 'src/context/'),
