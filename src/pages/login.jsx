@@ -9,7 +9,7 @@ function Login() {
   return (
     <React.Fragment>
       <HeaderRuadis />
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen dark:bg-[#343A40] bg-[#efefef]">
         <div className=" flex-grow">
           <RuadisLogin />
         </div>
