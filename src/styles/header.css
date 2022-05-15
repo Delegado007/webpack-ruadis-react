@@ -63,6 +63,6 @@
     justify-content: flex-end;
   }
   .navbar .container_search_desktop {
-    width: calc(100% - 680px);
+    width: calc(100% - 800px);
   }
 }

@@ -41,7 +41,7 @@ function HeaderRuadis() {
   });
   return (
     <header
-      className="navbar bg-white dark:bg-slate-800 mb-0 shadow-xl absolute"
+      className="navbar flex-row flex-nowrap bg-white dark:bg-slate-800 mb-0 shadow-xl absolute"
       id="navegacion"
     >
       <Hamburguesa />

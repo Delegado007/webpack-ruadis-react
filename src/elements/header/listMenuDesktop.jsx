@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 function ListMenuDesktop() {
   return (
-    <div className="flex flex-col itemsMenu relative right-0 px-2">
+    <div className=" grow-0 itemsMenu px-2">
       <ul className="menu-horizontal items-center">
         <li className="rounded dark:hover:bg-slate-700 hover:bg-slate-200 py-3">
           <NavLink to="/" className="px-2">

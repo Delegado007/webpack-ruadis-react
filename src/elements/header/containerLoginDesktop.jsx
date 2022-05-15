@@ -3,7 +3,7 @@ import { LoginSingUp } from "./loginSinUp";
 
 function ContainerLoginDesktop() {
   return (
-    <div className="justify-center perfil w-fit pr-2">
+    <div className=" grow-0 basis-auto justify-center perfil px-2">
       <div id="login-desktop">
         <LoginSingUp />
       </div>

@@ -28,7 +28,7 @@ function ImputBusquedaDesktop({ setBuscar }) {
     boton.className = "no_display";
   };
   return (
-    <div className="container_search_desktop">
+    <div className="grow container_search_desktop">
       <div
         id="SearchWrapper"
         data-component-locator="SearchBar"

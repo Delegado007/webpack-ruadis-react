@@ -1,9 +1,3 @@
-header .container_search_desktop {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  height: 100%;
-}
 div .lupa_search_desktop {
   display: flex;
   -webkit-box-align: center;

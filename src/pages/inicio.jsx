@@ -11,7 +11,7 @@ function Inicio() {
   return (
     <React.Fragment>
       <HeaderRuadis />
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-[#343A40]">
         <div className="flex-grow">
           <RuadisMain />
         </div>
