@@ -10,10 +10,10 @@ function Login() {
     <React.Fragment>
       <HeaderRuadis />
       <div className="flex flex-col min-h-screen dark:bg-[#343A40] bg-[#efefef]">
-        <div className=" flex-grow">
+        <div className="flex-grow">
           <RuadisLogin />
         </div>
-        <div className="basis-auto bg-white">
+        <div className="basis-auto grow-0">
           <RuadisFoter />
         </div>
       </div>

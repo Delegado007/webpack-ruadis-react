@@ -16,7 +16,7 @@ function RuadisLogin() {
               </label>
               <input
                 type="email"
-                className=" w-72 rounded-md leading-8 mb-4 mt-1"
+                className="text-slate-900 px-2 w-72 rounded-md leading-8 mb-4 mt-1"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
               />
@@ -27,7 +27,7 @@ function RuadisLogin() {
               </label>
               <input
                 type="password"
-                className="w-72 rounded-md leading-8 mb-10 mt-1"
+                className="text-slate-900 px-2 w-72 rounded-md leading-8 mb-10 mt-1"
                 id="exampleInputPassword1"
               />
               <a className="link link-accent absolute text-sm top-0 right-0 float-right">
