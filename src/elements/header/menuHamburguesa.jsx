@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { ImputBusquedaMobil } from "@elements/header/searchMobil";
 import { LoginSingUp } from "@elements/header/loginSinUp";
@@ -8,20 +8,6 @@ import "@styles/header.css";
 function Hamburguesa() {
   const label = document.getElementById("dropMenuAvatar");
   const { buscar, setBuscar } = React.useContext(RuadisContext);
-  // const [isOpen, setIsOpen] = useState(false);
-  // const btnRef = useRef();
-
-  // useEffect(() => {
-  //   const closeDropdown = (e) => {
-  //     console.log(e);
-  //     if (e.path[3] !== btnRef.current) {
-  //       setIsOpen(false);
-  //     }
-  //   };
-  //   document.body.addEventListener("click", closeDropdown);
-  //   return () => document.body.removeEventListener("click", closeDropdown);
-  // }, []);
-
   return (
     <div className="navbar-start items">
       <div className="hamburguesa dropdown" id="botonOpenMenu">

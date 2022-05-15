@@ -3,8 +3,7 @@ import "@styles/global.css";
 
 function RuadisLogin() {
   return (
-    <main className="min-h-screen">
-      <div className="h-44"></div>
+    <main className="pt-36">
       <div>
         <h1 className="text-2xl text-center mb-4">Iniciar Sesi&oacute;n</h1>
       </div>

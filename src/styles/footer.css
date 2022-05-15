@@ -1,0 +1,15 @@
+@media screen and (max-width: 800px) {
+  #ruadisFooter {
+    flex-direction: column;
+    align-content: center;
+  }
+  #ruadisFooter div {
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 801px) {
+  #ruadisFooter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
