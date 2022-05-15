@@ -6,6 +6,7 @@ import { useState } from "react";
 import { Hamburguesa } from "@elements/header/menuHamburguesa.jsx";
 import { ImputBusquedaDesktop } from "@elements/header/searchDesktop.jsx";
 import { ContainerLoginDesktop } from "@elements/header/containerLoginDesktop.jsx";
+import { DarkMode } from "@elements/header/darkMode";
 import { Logo } from "@elements/header/logo.jsx";
 import { ListMenuDesktop } from "@elements/header/listMenuDesktop.jsx";
 import { RuadisContext } from "@context/";
@@ -48,6 +49,9 @@ function HeaderRuadis() {
       <ImputBusquedaDesktop valor={buscar} setBuscar={setBuscar} />
       <ListMenuDesktop />
       <ContainerLoginDesktop />
+      <div className="mx-2" id="darkModeMobil">
+        <DarkMode />
+      </div>
     </header>
   );
 }

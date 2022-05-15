@@ -34,6 +34,10 @@
   .navbar .logo a {
     font-size: 1.5rem;
   }
+  .navbar .logo {
+    position: absolute;
+    right: calc(50% - 37px);
+  }
   .navbar .perfil {
     width: 50%;
   }
