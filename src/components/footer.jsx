@@ -5,7 +5,7 @@ import "@styles/footer.css";
 function RuadisFoter() {
   return (
     <footer
-      className="flex justify-around flex-wrap footer px-10 py-4 text-dark dark:text-slate-100 dark:bg-slate-800"
+      className="flex justify-around flex-wrap footer px-10 py-4 text-dark bg-slate-300 dark:text-slate-100 dark:bg-slate-800"
       id="ruadisFooter"
     >
       <div className="self-center grid-flow-col pl-16">
