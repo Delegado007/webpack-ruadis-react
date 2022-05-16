@@ -9,9 +9,11 @@ function LoginSingUp() {
           Log In
         </button>
       </NavLink>
-      <button className="btn btn-active dark:btn-outline dark:text-white text-white hover:text-slate-200">
-        Sing Up
-      </button>
+      <NavLink to="/register">
+        <button className="btn btn-active dark:btn-outline dark:text-white text-white hover:text-slate-200">
+          Sing Up
+        </button>
+      </NavLink>
     </React.Fragment>
   );
 }
