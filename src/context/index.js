@@ -7,6 +7,20 @@ const RuadisContext = React.createContext();
 function RuadisProvider(props) {
   const [libros, setLibros] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
+  const [nameUser, setNameUser] = useState(null);
+
+  useEffect(() => {
+    const loggedUserJSON = window.localStorage.getItem("loggedRuadisApp");
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON);
+      setUser(user);
+      const name = user.user.email;
+      const index = name.indexOf("@");
+      setNameUser(name.substring(0, index));
+    }
+  }, []);
+
   useEffect(async () => {
     const response = await axios(API);
     setLibros(response.data);
@@ -23,6 +37,8 @@ function RuadisProvider(props) {
       buscar,
       setBuscar,
       loading,
+      user,
+      nameUser,
     }}
     >
       {props.children}

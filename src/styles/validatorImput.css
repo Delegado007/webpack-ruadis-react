@@ -1,0 +1,11 @@
+#registro .valido {
+  box-sizing: border-box;
+  background-color: rgb(127 255 131 / 84%);
+  border: 1.5px solid #00ff24;
+}
+
+#registro .inValido {
+  box-sizing: border-box;
+  background-color: #ff574d;
+  border: 1.5px solid #9d0000;
+}

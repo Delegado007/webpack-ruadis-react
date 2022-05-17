@@ -6,10 +6,8 @@ import { login } from "./../service/login";
 function RuadisLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState({});
   const [errorMessage, setErrorMessage] = useState(null);
 
-  console.log(user);
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
@@ -17,9 +15,11 @@ function RuadisLogin() {
         email,
         password,
       });
-      setUser(user);
+
+      window.localStorage.setItem("loggedRuadisApp", JSON.stringify(user));
       setEmail("");
       setPassword("");
+      window.location = "/";
     } catch (error) {
       setErrorMessage(true);
       setPassword("");
@@ -37,10 +37,8 @@ function RuadisLogin() {
       <form onSubmit={handleLogin} className="w-80 mx-auto">
         <div className="bg-slate-300 rounded dark:bg-slate-700">
           <div className="p-4">
-            <div className="">
-              <label htmlFor="exampleInputEmail1" className="">
-                Correo electrónico
-              </label>
+            <div>
+              <label htmlFor="exampleInputEmail1">Correo electrónico</label>
               <input
                 type="email"
                 className="text-slate-900 px-2 w-72 rounded-md leading-8 mb-4 mt-1"
@@ -53,9 +51,7 @@ function RuadisLogin() {
               />
             </div>
             <div className="relative">
-              <label htmlFor="exampleInputPassword1" className="">
-                Contrase&ntilde;a
-              </label>
+              <label htmlFor="exampleInputPassword1">Contrase&ntilde;a</label>
               <input
                 type="password"
                 className="text-slate-900 px-2 w-72 rounded-md leading-8 mb-2 mt-1"

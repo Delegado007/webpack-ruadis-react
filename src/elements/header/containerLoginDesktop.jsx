@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { LoginSingUp } from "./loginSinUp";
+import { RuadisContext } from "@context/";
 
 function ContainerLoginDesktop() {
+  const { user, nameUser } = useContext(RuadisContext);
+  const [dropAvatar, setDropAvatar] = useState(false);
+  const handleLogOut = () => {
+    window.localStorage.removeItem("loggedRuadisApp");
+
+    window.location.reload(true);
+  };
+
   return (
     <div className=" grow-0 basis-auto justify-center perfil px-2">
-      <div id="login-desktop">
-        <LoginSingUp />
-      </div>
-      {/* <div className="dropdown dropdown-end">
+      {user ? (
+        <div className="dropdown dropdown-end">
           <label
             tabIndex="1"
             className="btn btn-ghost btn-circle avatar"
-            onClick={dropAvatarMenu}
-            onBlur={dropFalse}
+            onClick={() => {
+              setDropAvatar((prevState) => !prevState);
+            }}
+            // onBlur={() => {
+            //   setDropAvatar(false);
+            // }}
           >
             <div className="w-10 rounded-full">
               <img src="https://api.lorem.space/image/face?hash=33791" />
@@ -25,20 +36,19 @@ function ContainerLoginDesktop() {
               tabIndex="1"
             >
               <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
+                <p>{nameUser}</p>
               </li>
               <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
+                <button onClick={handleLogOut}>Logout</button>
               </li>
             </ul>
           )}
-        </div> */}
+        </div>
+      ) : (
+        <div id="login-desktop">
+          <LoginSingUp />
+        </div>
+      )}
     </div>
   );
 }
