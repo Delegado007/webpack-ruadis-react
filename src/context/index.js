@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-const API = "https://serene-ocean-03988.herokuapp.com/api/v1/products";
+
+const API = process.env.API;
+
 
 const RuadisContext = React.createContext();
 
@@ -22,7 +24,7 @@ function RuadisProvider(props) {
   }, []);
 
   useEffect(async () => {
-    const response = await axios(API);
+    const response = await axios(`${API}/api/v1/products`);
     setLibros(response.data);
     setLoading(false);
   }, []);

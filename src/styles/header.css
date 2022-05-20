@@ -50,6 +50,9 @@
   #login-desktop {
     display: none;
   }
+  .navbar .login-displayed {
+    display: none;
+  }
 }
 @media screen and (min-width: 959px) {
   .navbar .items {

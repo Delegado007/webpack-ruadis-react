@@ -1,13 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { ImputBusquedaMobil } from "@elements/header/searchMobil";
-import { LoginSingUp } from "@elements/header/loginSinUp";
+import { ImputBusquedaMobil } from "@elements/header/search_mobil";
+import { LoginSingUp } from "@elements/header/login_and_singup";
 import { RuadisContext } from "@context/";
 import "@styles/header.css";
 
 function Hamburguesa() {
-  const label = document.getElementById("dropMenuAvatar");
-  const { buscar, setBuscar } = React.useContext(RuadisContext);
+  const { buscar, setBuscar, user } = React.useContext(RuadisContext);
   return (
     <div className="navbar-start items">
       <div className="hamburguesa dropdown" id="botonOpenMenu">
@@ -100,9 +99,11 @@ function Hamburguesa() {
               </a>
             </li>
           </ul>
-          <div className=" flex justify-center pt-3">
-            <LoginSingUp />
-          </div>
+          {!user && (
+            <div className=" flex justify-center pt-3">
+              <LoginSingUp />
+            </div>
+          )}
         </div>
       </div>
     </div>
