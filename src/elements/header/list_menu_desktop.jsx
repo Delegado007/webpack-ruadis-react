@@ -12,16 +12,24 @@ function ListMenuDesktop() {
           </NavLink>
         </li>
         <li className="rounded  dark:hover:bg-slate-700 hover:bg-slate-200 py-3">
-          <a className="px-2 ">Libros</a>
+          <NavLink to="/libros" className="px-2 ">
+            Libros
+          </NavLink>
         </li>
         <li className="rounded  dark:hover:bg-slate-700 hover:bg-slate-200 py-3">
-          <a className="px-2">Escuelas</a>
+          <NavLink to="/escuelas" className="px-2">
+            Escuelas
+          </NavLink>
         </li>
         <li className="rounded  dark:hover:bg-slate-700 hover:bg-slate-200 py-3">
-          <a className="px-2">Terciarios</a>
+          <NavLink to="/terciarios" className="px-2">
+            Terciarios
+          </NavLink>
         </li>
         <li className="rounded  dark:hover:bg-slate-700 hover:bg-slate-200 py-3">
-          <a className="px-2">Varios</a>
+          <NavLink to="/varios" className="px-2">
+            Varios
+          </NavLink>
         </li>
       </ul>
     </div>
