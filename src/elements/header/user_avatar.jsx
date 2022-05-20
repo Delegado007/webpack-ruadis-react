@@ -25,17 +25,19 @@ function UserAvatar() {
       </label>
       {dropAvatar && (
         <ul
-          className="mt-3 p-2 shadow menu menu-compact absolute z-50 origin-top rounded-box w-52 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-100 dropAvatar right-0"
+          className="mt-3 p-2 shadow menu items-center menu-compact absolute z-50 origin-top rounded-box w-fit bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-100 dropAvatar right-0"
           id="dropMenuAvatar"
           tabIndex="1"
         >
-          <li>
-            <p>{nameUser}</p>
+          <li className="w-fit ">
+            <p className="text-base">{nameUser}</p>
           </li>
-          <li>
-            <button onClick={handleLogOut}>Logout</button>
+          <li className="w-fit">
+            <button className="text-base" onClick={handleLogOut}>
+              Logout
+            </button>
           </li>
-          <li className="">
+          <li className="w-fit">
             <DarkMode />
           </li>
         </ul>

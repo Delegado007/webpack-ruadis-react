@@ -7,6 +7,7 @@ function RuadisLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
+  const [successfulLogin, setSuccessfullLogin] = useState(null);
 
   const handleLogin = async (event) => {
     event.preventDefault();
@@ -17,9 +18,13 @@ function RuadisLogin() {
       });
 
       window.localStorage.setItem("loggedRuadisApp", JSON.stringify(user));
-      setEmail("");
-      setPassword("");
-      window.location = "/";
+      setSuccessfullLogin(true);
+      setTimeout(() => {
+        setEmail("");
+        setPassword("");
+        setSuccessfullLogin(null);
+        window.location = "/";
+      }, 1500);
     } catch (error) {
       setErrorMessage(true);
       setPassword("");
@@ -70,6 +75,11 @@ function RuadisLogin() {
                     <p className="text-white my-auto">
                       Credenciales incorrectas
                     </p>
+                  </div>
+                )}
+                {successfulLogin !== null && (
+                  <div className="flex h-full justify-center bg-green-500 rounded-sm">
+                    <p className="text-white my-auto">Bienvenido!</p>
                   </div>
                 )}
               </div>
