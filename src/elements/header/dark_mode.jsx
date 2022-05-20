@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from "react";
 
 function DarkMode() {
-  const [darkMode, setDarkMode] = useState(false);
-  useEffect(() => {
-    const localDarkMode = JSON.parse(localStorage.getItem("localDarkMode"));
+  const [darkMode, setDarkMode] = useState(null);
+  useEffect(async () => {
+    const localDarkMode = await JSON.parse(
+      localStorage.getItem("localDarkMode")
+    );
     if (localDarkMode === null) {
       localStorage.setItem("localDarkMode", "false");
+      return false;
     } else {
       setDarkMode(localDarkMode);
     }
-    if (darkMode) {
-      document.querySelector("html").className = "";
+    if (localDarkMode) {
+      document.querySelector("html").className = "dark";
       document.querySelector("#docMode").checked = true;
     }
-    if (!darkMode) {
+    if (!localDarkMode) {
       document.querySelector("#docMode").checked = false;
-      document.querySelector("html").className = "dark";
+      document.querySelector("html").removeAttribute("class");
     }
-  });
+  }, []);
   const cambiardarkMode = (evento) => {
     if (!evento.target.checked) {
       localStorage.setItem("localDarkMode", "false");
-      document.querySelector("html").className = "";
+      document.querySelector("html").removeAttribute("class");
       setDarkMode(false);
     } else {
       localStorage.setItem("localDarkMode", "true");

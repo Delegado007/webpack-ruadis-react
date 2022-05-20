@@ -33,8 +33,11 @@ function UserAvatar() {
             <p className="text-base">{nameUser}</p>
           </li>
           <li className="w-fit">
-            <button className="text-base" onClick={handleLogOut}>
-              Logout
+            <button
+              className="text-base w-36 justify-center"
+              onClick={handleLogOut}
+            >
+              Cerrar Sesi&oacute;n
             </button>
           </li>
           <li className="w-fit">
