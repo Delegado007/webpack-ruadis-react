@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "@styles/global.css";
 import { RuadisContext } from "@context/";
 import logo from "@images/logoPdf2.png";
 
 function RenderItem() {
-  const { buscar, libros, loading } = React.useContext(RuadisContext);
+  const { buscar, libros } = useContext(RuadisContext);
   let searchedPDF = { libros: [] };
 
   if (!buscar.length >= 1) {
@@ -19,13 +19,6 @@ function RenderItem() {
 
   return (
     <div className="flex flex-wrap justify-center">
-      {loading && (
-        <div className="relative min-h-screen w-screen">
-          <button className="absolute text-lg w-52 btn btn-ghost loading top-1/3 left-[calc(50%-6.5rem)] ">
-            Cargando Libros
-          </button>
-        </div>
-      )}
       {searchedPDF.libros.map((libro) => (
         <div
           key={libro.id}
