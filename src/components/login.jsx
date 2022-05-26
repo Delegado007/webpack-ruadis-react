@@ -66,9 +66,12 @@ function RuadisLogin() {
                   setPassword(target.value);
                 }}
               />
-              <a className="link link-accent absolute text-sm top-0 right-0 float-right">
+              <NavLink
+                to="/recovery"
+                className="link link-accent absolute text-sm top-0 right-0 float-right"
+              >
                 Olvidaste tu contrase&ntilde;a?
-              </a>
+              </NavLink>
               <div className="h-8 mb-2">
                 {errorMessage !== null && (
                   <div className="flex h-full justify-center bg-red-600 rounded-sm">

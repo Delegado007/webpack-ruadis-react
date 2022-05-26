@@ -7,3 +7,14 @@ body {
   flex-direction: column;
   flex-grow: 1;
 }
+
+input {
+  border: none;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+input:focus {
+  outline: none;
+}
