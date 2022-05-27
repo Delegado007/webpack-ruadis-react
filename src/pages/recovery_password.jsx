@@ -11,6 +11,8 @@ function RecoveryPassword() {
   const { loading } = useContext(RuadisContext);
   const [newPassword, setNewPassword] = useState("");
   const [token, setToken] = useState("");
+  const [error, setError] = useState(null);
+  const [changend, setChanged] = useState(null);
 
   useEffect(() => {
     const url = window.location.href;
@@ -25,9 +27,16 @@ function RecoveryPassword() {
         token,
         newPassword,
       });
+      setError(null);
+      setChanged(true);
+      setTimeout(() => {
+        setChanged(null);
+        window.location = "/login";
+      }, 1500);
       console.log(data);
     } catch (error) {
       console.log(error);
+      setError(true);
     }
   };
   console.log(token);
@@ -54,7 +63,22 @@ function RecoveryPassword() {
                       }}
                     />
                   </div>
-                  <div className="h-8 mb-2"></div>
+                  <div className="h-8 mb-2">
+                    {error !== null && (
+                      <div className="flex h-full justify-center bg-red-600 rounded-sm">
+                        <p className="text-white my-auto">
+                          Contraseña muy corta
+                        </p>
+                      </div>
+                    )}
+                    {changend !== null && (
+                      <div className="flex h-full justify-center bg-green-500 rounded-sm">
+                        <p className="text-white my-auto">
+                          Contraseña Cambiada
+                        </p>
+                      </div>
+                    )}
+                  </div>
                   <button
                     type="submit"
                     className="w-72 btn btn-active btn-accent"

@@ -10,6 +10,8 @@ import "@styles/global.css";
 function Recovery() {
   const { loading } = useContext(RuadisContext);
   const [email, setEmail] = useState("");
+  const [error, setError] = useState(null);
+  const [sentEmail, setSentEmail] = useState(null);
 
   const handleRecovery = async (event) => {
     event.preventDefault();
@@ -17,8 +19,14 @@ function Recovery() {
       const data = await recovery({
         email,
       });
+      setError(null);
+      setSentEmail(true);
+      setTimeout(() => {
+        setSentEmail(null);
+      }, 1500);
       console.log(data);
     } catch (error) {
+      setError(true);
       console.log(error);
     }
   };
@@ -55,7 +63,20 @@ function Recovery() {
                       }}
                     />
                   </div>
-                  <div className="h-8 mb-2"></div>
+                  <div className="h-8 mb-2">
+                    {error !== null && (
+                      <div className="flex h-full justify-center bg-red-600 rounded-sm">
+                        <p className="text-white my-auto">
+                          No se encontró el correo
+                        </p>
+                      </div>
+                    )}
+                    {sentEmail !== null && (
+                      <div className="flex h-full justify-center bg-green-500 rounded-sm">
+                        <p className="text-white my-auto">Email enviado</p>
+                      </div>
+                    )}
+                  </div>
                   <button
                     type="submit"
                     className="w-72 btn btn-active btn-accent"
