@@ -7,6 +7,9 @@ import { Varios } from "./../pages/varios";
 import { Login } from "./../pages/login";
 import { Registro } from "./../pages/registro";
 import { Recovery } from "./../pages/recovery";
+import { RecoveryPassword } from "./../pages/recovery_password";
+
+import { EmailSent } from "./../pages/email_sent";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RuadisProvider } from "./../context";
@@ -23,6 +26,12 @@ function App() {
           <Route exact path="terciarios" element={<Terciarios />} />
           <Route exact path="varios" element={<Varios />} />
           <Route exact path="recovery" element={<Recovery />} />
+          <Route
+            exact
+            path="recovery_password"
+            element={<RecoveryPassword />}
+          />
+          <Route exact path="email_sent" element={<EmailSent />} />
           <Route exact path="/" element={<Inicio />} />
         </Routes>
       </BrowserRouter>

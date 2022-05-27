@@ -130,6 +130,7 @@ function RuadisRegistro() {
                 className="text-slate-900 px-2 w-72 h-8 rounded-md leading-8 mb-4 mt-1 focus:outline-hidden active:outline-hidden"
                 id="mail-registro"
                 aria-describedby="emailHelp"
+                placeholder="email@ejemplo.com"
                 value={email}
                 onChange={({ target }) => {
                   setEmail(target.value);

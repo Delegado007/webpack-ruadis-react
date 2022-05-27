@@ -1,28 +1,36 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { HeaderRuadis } from "@components/header";
 import { RuadisFoter } from "@components/footer.jsx";
 import { RuadisContext } from "@context/";
 import { Watsap } from "@elements/watsapp";
 import { NavLink } from "react-router-dom";
-import { recovery } from "@service/login";
+import { changePassword } from "@service/login";
 import "@styles/global.css";
 
-function Recovery() {
+function RecoveryPassword() {
   const { loading } = useContext(RuadisContext);
-  const [email, setEmail] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [token, setToken] = useState("");
 
-  const handleRecovery = async (event) => {
+  useEffect(() => {
+    const url = window.location.href;
+    const index = url.indexOf("=");
+    setToken(url.substring(index + 1, url.length));
+  }, []);
+
+  const handleChangePassword = async (event) => {
     event.preventDefault();
     try {
-      const data = await recovery({
-        email,
+      const data = await changePassword({
+        token,
+        newPassword,
       });
       console.log(data);
     } catch (error) {
       console.log(error);
     }
   };
-
+  console.log(token);
   return (
     <React.Fragment>
       <HeaderRuadis />
@@ -30,28 +38,19 @@ function Recovery() {
         <div className="flex-grow">
           <main className="pt-36">
             <div className="w-80 mx-auto ">
-              <h1 className="text-2xl text-center mb-4">
-                Recuperar contraseña
-              </h1>
-              <p className="text-center pb-8">
-                Introduce tu dirección de Email con la que te registraste
-              </p>
+              <h1 className="text-2xl text-center mb-4">Cambiar contraseña</h1>
             </div>
-            <form className="w-80 mx-auto" onSubmit={handleRecovery}>
+            <form className="w-80 mx-auto" onSubmit={handleChangePassword}>
               <div className="bg-slate-300 rounded dark:bg-slate-700">
                 <div className="p-4">
                   <div>
-                    <label htmlFor="exampleInputEmail1">
-                      Correo electr&oacute;nico *
-                    </label>
+                    <label htmlFor="exampleInputEmail1">Nueva Contraseña</label>
                     <input
-                      type="email"
+                      type="password"
                       className="text-slate-900 px-2 w-72 h-8 rounded-md leading-8 mb-4 mt-1"
-                      aria-describedby="emailHelp"
-                      placeholder="email@ejemplo.com"
-                      value={email}
+                      value={newPassword}
                       onChange={({ target }) => {
-                        setEmail(target.value);
+                        setNewPassword(target.value);
                       }}
                     />
                   </div>
@@ -60,7 +59,7 @@ function Recovery() {
                     type="submit"
                     className="w-72 btn btn-active btn-accent"
                   >
-                    Enviar
+                    Cambiar Constraseña
                   </button>
                 </div>
               </div>
@@ -83,4 +82,4 @@ function Recovery() {
   );
 }
 
-export { Recovery };
+export { RecoveryPassword };
